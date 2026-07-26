@@ -1,0 +1,67 @@
+.hero {
+  background: radial-gradient(ellipse 900px 400px at 20% 0%, rgba(67,97,238,0.18), transparent),
+              var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0;
+}
+
+.hero-eyebrow { margin-bottom: 20px; }
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.08;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 480px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  padding: 48px 32px 80px;
+}
+
+.catalog-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.catalog-heading h2 { font-size: 22px; }
+.catalog-heading span { color: var(--text-muted); font-size: 13px; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.empty-state {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+.empty-state p { color: var(--text); font-weight: 600; margin-bottom: 6px; }
+
+.product-skeleton {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  background: linear-gradient(100deg, var(--bg-card) 30%, var(--bg-elevated) 50%, var(--bg-card) 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 900px) {
+  .catalog { grid-template-columns: 1fr; }
+}
