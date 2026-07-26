@@ -4,9 +4,12 @@ A complete e-commerce site built with **React** (frontend), **Node.js + Express*
 
 ---
 
-## 📁 What's inside
+## 📁 What's inside this 
 
-```
+
+
+
+
 nexus-fullstack/
 ├── backend/     ← Node.js + Express API (products, auth, orders)
 └── frontend/    ← React + Vite website (what the user sees)
